@@ -4,7 +4,7 @@ import './style.css';
 export default function App() {
   return (
     <div>
-      <img src="img/product.jpg" alt="제품 이미지" />
+      <img src="img/ProductImage.svg" alt="제품 이미지" />
       <h1>래피젠 코로나 자가 검사 키트 2개입X1박스</h1>
       <div>
         <p>88%</p>
@@ -31,7 +31,7 @@ export default function App() {
       </div>
       <button>
         <img src="img/IconNaver.svg" alt="네이버아이콘" />
-        구매하기기
+        구매하기
       </button>
     </div>
   );
