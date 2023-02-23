@@ -38,9 +38,9 @@ export default function App() {
         <p className="product-total--count">총 수량 1개</p>
         <p className="product-total--price">6,370원</p>
       </div>
-      <button>
+      <button className="purchase">
         <img src="img/IconNaver.svg" alt="네이버아이콘" />
-        구매하기
+        <span>구매하기</span>
       </button>
     </div>
   );
