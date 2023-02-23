@@ -25,16 +25,18 @@ export default function App() {
         </span>
         <p className="product-delivery--rule">10개마다 부과</p>
       </div>
-      <div>
-        <button>-</button>
-        <output>1</output>
-        <button>+</button>
+      <div className="product-quantity">
+        <button className="product-quantity--minus">-</button>
+        <output className="product-quantity--output">1</output>
+        <button className="product-quantity--plus">+</button>
       </div>
-      <div>
-        <p>총 상품 금액</p>
-        <button>?</button>
-        <p>총 수량 1개</p>
-        <p>6,370원</p>
+      <div className="product-total">
+        <div className="product-total--amount">
+          <p>총 상품 금액</p>
+          <button>?</button>
+        </div>
+        <p className="product-total--count">총 수량 1개</p>
+        <p className="product-total--price">6,370원</p>
       </div>
       <button>
         <img src="img/IconNaver.svg" alt="네이버아이콘" />
