@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const TotalAmount = () => {
+const TotalAmount = ({ output }) => {
   const [view, setView] = useState(false);
+  const [price, setPrice] = useState(6370);
+
+  useEffect(() => {
+    setPrice(6370 * output);
+  }, [output]);
+
   return (
     <div className="product-total">
       <div className="product-total--amount">
@@ -29,8 +35,10 @@ const TotalAmount = () => {
           </div>
         )}
       </div>
-      <p className="product-total--count">총 수량 1개</p>
-      <p className="product-total--price">6,370원</p>
+      <p className="product-total--count">총 수량 {output}개</p>
+      <p className="product-total--price">
+        {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원
+      </p>
     </div>
   );
 };

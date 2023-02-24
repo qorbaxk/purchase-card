@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import {
   CountBtn,
@@ -9,12 +9,13 @@ import {
 } from './components/index';
 
 export default function App() {
+  const [output, setOutput] = useState(1);
   return (
     <div className="container">
       <Product />
       <DeliveryInfo />
-      <CountBtn />
-      <TotalAmount />
+      <CountBtn output={output} setOutput={setOutput} />
+      <TotalAmount output={output} />
       <PurchaseBtn />
     </div>
   );
