@@ -13,6 +13,8 @@ const TotalAmount = ({ output }) => {
       <div className="product-total--amount">
         <p>총 상품 금액</p>
         <button
+          role="button"
+          aria-label="총 상품금액 안내 더보기"
           onClick={() => {
             setView(true);
           }}
@@ -26,6 +28,8 @@ const TotalAmount = ({ output }) => {
             </span>
             <span>결제시 배송비가 추가될 수 있습니다.</span>
             <button
+              role="button"
+              aria-label="총 상품금액 안내 닫기"
               onClick={() => {
                 setView(false);
               }}

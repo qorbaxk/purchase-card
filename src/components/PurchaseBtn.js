@@ -36,8 +36,11 @@ const PurchaseBtn = ({ output }) => {
         className="purchase"
         onMouseOver={mouseHover}
         onMouseOut={mouseOut}
+        role="submit"
       >
         <svg
+          role="img"
+          aria-hidden="true"
           width="28"
           height="28"
           viewBox="0 0 28 28"

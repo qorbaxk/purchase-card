@@ -14,11 +14,26 @@ const CountBtn = ({ output, setOutput }) => {
 
   return (
     <div className="product-quantity">
-      <button className="product-quantity--minus" onClick={minusOutput}>
+      <button
+        aria-label="상품 수량 줄이기"
+        role="button"
+        className="product-quantity--minus"
+        onClick={minusOutput}
+      >
         -
       </button>
-      <output className="product-quantity--output">{output}</output>
-      <button className="product-quantity--plus" onClick={plusOutput}>
+      <output
+        aria-label="선택한 상품 수량"
+        className="product-quantity--output"
+      >
+        {output}
+      </output>
+      <button
+        aria-label="상품 수량 늘리기"
+        role="button"
+        className="product-quantity--plus"
+        onClick={plusOutput}
+      >
         +
       </button>
     </div>
