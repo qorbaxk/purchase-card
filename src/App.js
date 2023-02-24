@@ -16,7 +16,7 @@ export default function App() {
       <DeliveryInfo />
       <CountBtn output={output} setOutput={setOutput} />
       <TotalAmount output={output} />
-      <PurchaseBtn />
+      <PurchaseBtn output={output} />
     </div>
   );
 }
