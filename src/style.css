@@ -149,7 +149,7 @@ body {
   flex-grow: 1;
   font-weight: 700;
 }
-.product-total--amount button {
+.product-total--amount > button {
   background-color: #ffffff;
   border: 1px solid #dee0e3;
   width: 16px;
@@ -171,6 +171,36 @@ body {
 .product-total p:nth-child(2)::after {
   margin-left: 12px;
   transform: translateY(3px);
+}
+/* 더보기 버튼 배너 */
+.product-total--amount-banner {
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 296px;
+  height: 76px;
+  font-size: 12px;
+  padding-left: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.product-total--amount-banner button {
+  position: absolute;
+  top: 18px;
+  right: 10px;
+  margin-left: 10px;
+  background-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
 }
 /* 구매 버튼 */
 .purchase {

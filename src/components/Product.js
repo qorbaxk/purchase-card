@@ -13,9 +13,15 @@ const Product = () => {
         <span>2개입X1박스</span>
       </h1>
       <div className="product-price">
-        <p className="product-price--discount-rate">88%</p>
-        <p className="product-price--before-price">56,760원</p>
-        <p className="product-price--after-price">6,370원</p>
+        <p className="product-price--discount-rate" aria-label="할인율">
+          88%
+        </p>
+        <p className="product-price--before-price" aria-label="구매 정가">
+          56,760원
+        </p>
+        <p className="product-price--after-price" aria-label="할인가">
+          6,370원
+        </p>
       </div>
     </>
   );
