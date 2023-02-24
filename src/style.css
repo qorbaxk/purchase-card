@@ -148,6 +148,7 @@ body {
   gap: 2px;
   flex-grow: 1;
   font-weight: 700;
+  position: relative;
 }
 .product-total--amount > button {
   background-color: #ffffff;
@@ -175,9 +176,9 @@ body {
 /* 더보기 버튼 배너 */
 .product-total--amount-banner {
   position: absolute;
-  bottom: 0;
+  bottom: -80px;
   background-color: #ffffff;
-  border: 1px solid black;
+  border: 1px solid #dee0e3;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -185,14 +186,39 @@ body {
   width: 296px;
   height: 76px;
   font-size: 12px;
-  padding-left: 16px;
+  padding: 16px;
   font-weight: 400;
   line-height: 150%;
+  z-index: 100;
+}
+.product-total--amount-banner::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 70px;
+  border-color: #ffffff transparent;
+  border-style: solid;
+  border-width: 0 11px 16px 11px;
+  z-index: 1;
+}
+.product-total--amount-banner::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  left: 70px;
+  border-color: #dee0e3 transparent;
+  border-style: solid;
+  border-width: 0 11px 16px 11px;
+  z-index: 0;
+}
+.product-total--amount-banner span b {
+  color: #6b90dc;
+  font-weight: 400;
 }
 .product-total--amount-banner button {
   position: absolute;
-  top: 18px;
-  right: 10px;
+  top: 20px;
+  right: 16px;
   margin-left: 10px;
   background-color: #ffffff;
   width: 16px;
@@ -201,6 +227,7 @@ body {
   justify-content: center;
   align-items: center;
   border: none;
+  cursor: pointer;
 }
 /* 구매 버튼 */
 .purchase {
