@@ -204,11 +204,11 @@ body {
 .product-total--amount-banner::after {
   content: '';
   position: absolute;
-  top: -16px;
+  top: -17px;
   left: 70px;
   border-color: #dee0e3 transparent;
   border-style: solid;
-  border-width: 0 11px 16px 11px;
+  border-width: 0 11px 17px 11px;
   z-index: 0;
 }
 .product-total--amount-banner span b {
