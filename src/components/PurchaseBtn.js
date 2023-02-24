@@ -2,9 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const PurchaseBtn = ({ output }) => {
   const [disable, setDisable] = useState(false);
-
   const btn = useRef();
   const logo = useRef();
+  const mouseHover = () => {
+    if (!btn.current.disabled) {
+      btn.current.style.background = '#0AAE4F';
+    }
+  };
+  const mouseOut = () => {
+    if (!btn.current.disabled) {
+      btn.current.style.background = '#03C75A';
+    }
+  };
   useEffect(() => {
     if (btn.current.disabled) {
       btn.current.style.background = '#DEE0E3';
@@ -25,6 +34,8 @@ const PurchaseBtn = ({ output }) => {
         ref={btn}
         disabled={output === 0 ? true : false}
         className="purchase"
+        onMouseOver={mouseHover}
+        onMouseOut={mouseOut}
       >
         <svg
           width="28"
